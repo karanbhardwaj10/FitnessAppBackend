@@ -1,13 +1,14 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const inquirySchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
+  age:Number,
   occupation: String,
   gender: String,
   inquiryMessage: String,
 });
 
-const inquiryModel = mongoose.model("InquiryData", inquirySchema); // Create a Mongoose model
+export const inquiryModelSchema = mongoose.model("InquiryData", inquirySchema); // Create and export a Mongoose model
 
-module.exports = inquiryModel; // Export the model
+
